@@ -1,0 +1,24 @@
+include:
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/pipeline-templates/stages.yml
+
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/pipeline-templates/environments.yml
+
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/job-templates/npm-job-templates.yml
+
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/job-templates/commitlint-job-templates.yml
+
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/job-templates/angular-job-templates.yml
+
+  - project: savushkin.i/environment
+    ref: master
+    file: templates/gitlab-ci/job-templates/semantic-release-job-templates.yml
