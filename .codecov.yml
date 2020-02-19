@@ -1,0 +1,32 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 80%
+        threshold: 5%
+      common:
+        flags:
+          - common
+      gitlab-api:
+        flags:
+          - gitlab-api
+      markdownlint:
+        flags:
+          - markdownlint
+      zip-js:
+        flags:
+          - zip-js
+
+flags:
+  common:
+    paths:
+      - projects/common/
+  gitlab-api:
+    paths:
+      - projects/gitlab-api/
+  markdownlint:
+    paths:
+      - projects/markdownlint/
+  zip-js:
+    paths:
+      - projects/zip-js/

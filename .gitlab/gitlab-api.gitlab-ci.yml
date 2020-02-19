@@ -1,0 +1,39 @@
+Linting Gitlab Api Library:
+  extends:
+    - .ng:lint
+    - .gitlab-api-library
+
+Unit testing Gitlab Api Library:
+  variables:
+    CODECOV_FLAGS: gitlab-api
+  before_script:
+    - make -f /opt/makefiles/Makefile.angular build
+    - npm run ci:test:before_script --if-present
+  extends:
+    - .ng:test
+    - .gitlab-api-library
+
+General Building Gitlab Api Library:
+  extends:
+    - .ng:build:general
+    - .gitlab-api-library
+
+Development Building Gitlab Api Library:
+  extends:
+    - .ng:build:develop
+    - .gitlab-api-library
+
+Test Building Gitlab Api Library:
+  extends:
+    - .ng:build:test
+    - .gitlab-api-library
+
+Stage Building Gitlab Api Library:
+  extends:
+    - .ng:build:stage
+    - .gitlab-api-library
+
+Production Building Gitlab Api Library:
+  extends:
+    - .ng:build:production
+    - .gitlab-api-library

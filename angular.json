@@ -1,6 +1,250 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "@ngx-library/gitlab-api": {
+      "projectType": "library",
+      "root": "projects/gitlab-api",
+      "sourceRoot": "projects/gitlab-api",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/gitlab-api/tsconfig.lib.json",
+            "project": "projects/gitlab-api/ng-package.json"
+          },
+          "configurations": {
+            "development": {
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
+              "project": "projects/gitlab-api/ng-package.prod.json"
+            },
+            "test": {
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
+              "project": "projects/gitlab-api/ng-package.prod.json"
+            },
+            "stage": {
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
+              "project": "projects/gitlab-api/ng-package.prod.json"
+            },
+            "production": {
+              "tsConfig": "projects/gitlab-api/tsconfig.lib.prod.json",
+              "project": "projects/gitlab-api/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gitlab-api/test.ts",
+            "tsConfig": "projects/gitlab-api/tsconfig.spec.json",
+            "karmaConfig": "projects/gitlab-api/karma.conf.js",
+            "codeCoverageExclude": [
+              "projects/gitlab-api/test.ts"
+            ],
+            "codeCoverage": true
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gitlab-api/tsconfig.lib.json",
+              "projects/gitlab-api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ngx-library/zip-js": {
+      "projectType": "library",
+      "root": "projects/zip-js",
+      "sourceRoot": "projects/zip-js",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/zip-js/tsconfig.lib.json",
+            "project": "projects/zip-js/ng-package.json"
+          },
+          "configurations": {
+            "development": {
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
+              "project": "projects/zip-js/ng-package.prod.json"
+            },
+            "test": {
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
+              "project": "projects/zip-js/ng-package.prod.json"
+            },
+            "stage": {
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
+              "project": "projects/zip-js/ng-package.prod.json"
+            },
+            "production": {
+              "tsConfig": "projects/zip-js/tsconfig.lib.prod.json",
+              "project": "projects/zip-js/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/zip-js/test.ts",
+            "tsConfig": "projects/zip-js/tsconfig.spec.json",
+            "karmaConfig": "projects/zip-js/karma.conf.js",
+            "codeCoverageExclude": [
+              "projects/zip-js/test.ts"
+            ],
+            "codeCoverage": true,
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "./node_modules/zip-js/WebContent/",
+                "output": "./assets/zip-js",
+                "ignore": [
+                  ".jshintrc",
+                  "tests/**/*"
+                ]
+              }
+            ],
+            "scripts": [
+              "node_modules/zip-js/WebContent/zip.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/zip-js/tsconfig.lib.json",
+              "projects/zip-js/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ngx-library/markdownlint": {
+      "projectType": "library",
+      "root": "projects/markdownlint",
+      "sourceRoot": "projects/markdownlint",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/markdownlint/tsconfig.lib.json",
+            "project": "projects/markdownlint/ng-package.json"
+          },
+          "configurations": {
+            "development": {
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
+              "project": "projects/markdownlint/ng-package.prod.json"
+            },
+            "test": {
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
+              "project": "projects/markdownlint/ng-package.prod.json"
+            },
+            "stage": {
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
+              "project": "projects/markdownlint/ng-package.prod.json"
+            },
+            "production": {
+              "tsConfig": "projects/markdownlint/tsconfig.lib.prod.json",
+              "project": "projects/markdownlint/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/markdownlint/test.ts",
+            "tsConfig": "projects/markdownlint/tsconfig.spec.json",
+            "karmaConfig": "projects/markdownlint/karma.conf.js",
+            "codeCoverageExclude": [
+              "projects/markdownlint/test.ts"
+            ],
+            "codeCoverage": true
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/markdownlint/tsconfig.lib.json",
+              "projects/markdownlint/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ngx-library/common": {
+      "projectType": "library",
+      "root": "projects/common",
+      "sourceRoot": "projects/common",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/common/tsconfig.lib.json",
+            "project": "projects/common/ng-package.json"
+          },
+          "configurations": {
+            "development": {
+              "tsConfig": "projects/common/tsconfig.lib.prod.json",
+              "project": "projects/common/ng-package.prod.json"
+            },
+            "test": {
+              "tsConfig": "projects/common/tsconfig.lib.prod.json",
+              "project": "projects/common/ng-package.prod.json"
+            },
+            "stage": {
+              "tsConfig": "projects/common/tsconfig.lib.prod.json",
+              "project": "projects/common/ng-package.prod.json"
+            },
+            "production": {
+              "tsConfig": "projects/common/tsconfig.lib.prod.json",
+              "project": "projects/common/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/common/test.ts",
+            "tsConfig": "projects/common/tsconfig.spec.json",
+            "karmaConfig": "projects/common/karma.conf.js",
+            "codeCoverageExclude": [
+              "projects/common/test.ts"
+            ],
+            "codeCoverage": true
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/common/tsconfig.lib.json",
+              "projects/common/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@ngx-library/common"
 }

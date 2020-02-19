@@ -1,0 +1,39 @@
+Linting Zip JS:
+  extends:
+    - .ng:lint
+    - .zip-js-library
+
+Unit testing Zip JS:
+  variables:
+    CODECOV_FLAGS: zip-js
+  before_script:
+    - make -f /opt/makefiles/Makefile.angular build
+    - npm run ci:test:before_script --if-present
+  extends:
+    - .ng:test
+    - .zip-js-library
+
+General Building Zip JS:
+  extends:
+    - .ng:build:general
+    - .zip-js-library
+
+Development Building Zip JS:
+  extends:
+    - .ng:build:develop
+    - .zip-js-library
+
+Test Building Zip JS:
+  extends:
+    - .ng:build:test
+    - .zip-js-library
+
+Stage Building Zip JS:
+  extends:
+    - .ng:build:stage
+    - .zip-js-library
+
+Production Building Zip JS:
+  extends:
+    - .ng:build:production
+    - .zip-js-library

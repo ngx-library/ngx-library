@@ -1,3 +1,71 @@
+.common-library:
+  variables:
+    PROJECT_NAME: '@ngx-library/common'
+  only:
+    changes:
+      - angular.json
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - tslint.json
+      - karma.conf.js
+      - release.config.js
+      - .codecov.yml
+      - .gitlab-ci.yml
+      - .gitlab/common.gitlab-ci.yml
+      - projects/common/**/*
+
+.gitlab-api-library:
+  variables:
+    PROJECT_NAME: '@ngx-library/gitlab-api'
+  only:
+    changes:
+      - angular.json
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - tslint.json
+      - karma.conf.js
+      - release.config.js
+      - .codecov.yml
+      - .gitlab-ci.yml
+      - .gitlab/gitlab-api.gitlab-ci.yml
+      - projects/gitlab-api/**/*
+
+.markdownlint-library:
+  variables:
+    PROJECT_NAME: '@ngx-library/markdownlint'
+  only:
+    changes:
+      - angular.json
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - tslint.json
+      - karma.conf.js
+      - release.config.js
+      - .codecov.yml
+      - .gitlab-ci.yml
+      - .gitlab/markdownlint.gitlab-ci.yml
+      - projects/markdownlint/**/*
+
+.zip-js-library:
+  variables:
+    PROJECT_NAME: '@ngx-library/zip-js'
+  only:
+    changes:
+      - angular.json
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - tslint.json
+      - karma.conf.js
+      - release.config.js
+      - .codecov.yml
+      - .gitlab-ci.yml
+      - .gitlab/zip-js.gitlab-ci.yml
+      - projects/zip-js/**/*
+
 include:
   - project: savushkin.i/environment
     ref: master
@@ -22,3 +90,82 @@ include:
   - project: savushkin.i/environment
     ref: master
     file: templates/gitlab-ci/job-templates/semantic-release-job-templates.yml
+
+  - local: /.gitlab/common.gitlab-ci.yml
+  - local: /.gitlab/gitlab-api.gitlab-ci.yml
+  - local: /.gitlab/markdownlint.gitlab-ci.yml
+  - local: /.gitlab/zip-js.gitlab-ci.yml
+
+Linting commit message:
+  extends:
+    - .commitlint:lint
+
+General Release Ngx Library:
+  when: manual
+  dependencies:
+    - General Building Common library
+    - General Building Gitlab Api Library
+    - General Building Markdownlint library
+    - General Building Zip JS
+  extends:
+    - .semantic-release:general
+
+Development Release Ngx Library:
+  when: manual
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-npm-dependency
+    paths:
+      - node_modules/
+    policy: pull
+  dependencies:
+    - Development Building Common library
+    - Development Building Gitlab Api Library
+    - Development Building Markdownlint library
+    - Development Building Zip JS
+  extends:
+    - .semantic-release:develop
+
+Test Release Ngx Library:
+  when: manual
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-npm-dependency
+    paths:
+      - node_modules/
+    policy: pull
+  dependencies:
+    - Test Building Common library
+    - Test Building Gitlab Api Library
+    - Test Building Markdownlint library
+    - Test Building Zip JS
+  extends:
+    - .semantic-release:test
+
+Stage Release Ngx Library:
+  when: manual
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-npm-dependency
+    paths:
+      - node_modules/
+    policy: pull
+  dependencies:
+    - Stage Building Common library
+    - Stage Building Gitlab Api Library
+    - Stage Building Markdownlint library
+    - Stage Building Zip JS
+  extends:
+    - .semantic-release:stage
+
+Production Release Ngx Library:
+  when: manual
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-npm-dependency
+    paths:
+      - node_modules/
+    policy: pull
+  dependencies:
+    - Production Building Common library
+    - Production Building Gitlab Api Library
+    - Production Building Markdownlint library
+    - Production Building Zip JS
+  extends:
+    - .semantic-release:production

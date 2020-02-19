@@ -17,7 +17,33 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@ngx-library/gitlab-api": [
+        "dist/@ngx-library/markdownlint"
+      ],
+      "@ngx-library/gitlab-api/*": [
+        "dist/@ngx-library/markdownlint/*"
+      ],
+      "@ngx-library/zip-js": [
+        "dist/@ngx-library/zip-js"
+      ],
+      "@ngx-library/zip-js/*": [
+        "dist/@ngx-library/zip-js/*"
+      ],
+      "@ngx-library/markdownlint": [
+        "dist/@ngx-library/markdownlint"
+      ],
+      "@ngx-library/markdownlint/*": [
+        "dist/@ngx-library/markdownlint/*"
+      ],
+      "@ngx-library/common": [
+        "dist/@ngx-library/common"
+      ],
+      "@ngx-library/common/*": [
+        "dist/@ngx-library/common/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

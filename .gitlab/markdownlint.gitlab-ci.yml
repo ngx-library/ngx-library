@@ -1,0 +1,39 @@
+Linting Markdownlint library:
+  extends:
+    - .ng:lint
+    - .markdownlint-library
+
+Unit testing Markdownlint library:
+  variables:
+    CODECOV_FLAGS: markdownlint
+  before_script:
+    - make -f /opt/makefiles/Makefile.angular build
+    - npm run ci:test:before_script --if-present
+  extends:
+    - .ng:test
+    - .markdownlint-library
+
+General Building Markdownlint library:
+  extends:
+    - .ng:build:general
+    - .markdownlint-library
+
+Development Building Markdownlint library:
+  extends:
+    - .ng:build:develop
+    - .markdownlint-library
+
+Test Building Markdownlint library:
+  extends:
+    - .ng:build:test
+    - .markdownlint-library
+
+Stage Building Markdownlint library:
+  extends:
+    - .ng:build:stage
+    - .markdownlint-library
+
+Production Building Markdownlint library:
+  extends:
+    - .ng:build:production
+    - .markdownlint-library
