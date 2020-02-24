@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ngrx/platform/issues"
+    "url": "https://gitlab.com/ngx-library/ngx-library/issues"
   },
   "publishConfig": {
     "access": "public"
