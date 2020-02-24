@@ -1,0 +1,62 @@
+{
+  "extends": [
+    ":timezone(Europe/Moscow)",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)",
+    ":updateNotScheduled",
+    ":automergeMinor",
+    ":automergePr",
+    ":ignoreModulesAndTests",
+    ":maintainLockFilesDisabled",
+    ":autodetectPinVersions",
+    ":disableRateLimiting",
+    "group:monorepos",
+    "group:recommended",
+    "helpers:disableTypesNodeMajor",
+    ":assignAndReview(savushkin.i)"
+  ],
+  "commitMessageTopic": "{{depName}}",
+  "baseBranches": [
+    "develop"
+  ],
+  "packageRules": [
+    {
+      "packageNames": [
+        "typescript"
+      ],
+      "separateMinorPatch": true
+    },
+    {
+      "packageNames": [
+        "typescript"
+      ],
+      "updateTypes": [
+        "minor",
+        "major"
+      ],
+      "enabled": false
+    },
+    {
+      "depTypeList": [
+        "peerDependencies"
+      ],
+      "rangeStrategy": "bump"
+    },
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "semanticCommitType": "chore"
+    },
+    {
+      "depTypeList": [
+        "dependencies"
+      ],
+      "semanticCommitType": "build"
+    }
+  ]
+}
