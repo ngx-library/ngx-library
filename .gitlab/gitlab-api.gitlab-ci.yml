@@ -5,7 +5,7 @@ Linting Gitlab Api Library:
 
 Unit testing Gitlab Api Library:
   variables:
-    CODECOV_FLAGS: gitlab-api
+    CODECOV_FLAGS: ''
   before_script:
     - make -f /opt/makefiles/Makefile.angular build
     - npm run ci:test:before_script --if-present

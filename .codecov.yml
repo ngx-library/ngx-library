@@ -5,28 +5,21 @@ coverage:
         target: 80%
         threshold: 5%
       common:
-        flags:
-          - common
+        target: 80%
+        paths:
+          - projects/common/
       gitlab-api:
-        flags:
-          - gitlab-api
+        target: 80%
+        paths:
+          - projects/gitlab-api/
       markdownlint:
-        flags:
-          - markdownlint
+        target: 80%
+        paths:
+          - projects/markdownlint/
       zip-js:
-        flags:
-          - zip-js
+        target: 80%
+        paths:
+          - projects/zip-js/
 
-flags:
-  common:
-    paths:
-      - projects/common/
-  gitlab-api:
-    paths:
-      - projects/gitlab-api/
-  markdownlint:
-    paths:
-      - projects/markdownlint/
-  zip-js:
-    paths:
-      - projects/zip-js/
+codecov:
+  bot: mishka-assistant

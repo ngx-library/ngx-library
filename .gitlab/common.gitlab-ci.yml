@@ -5,7 +5,7 @@ Linting Common library:
 
 Unit testing Common library:
   variables:
-    CODECOV_FLAGS: common
+    CODECOV_FLAGS: ''
   before_script:
     - make -f /opt/makefiles/Makefile.angular build
     - npm run ci:test:before_script --if-present
