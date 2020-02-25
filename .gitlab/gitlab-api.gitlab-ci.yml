@@ -2,6 +2,7 @@ Linting Gitlab Api Library:
   extends:
     - .ng:lint
     - .gitlab-api-library
+    - .gitlab-api-library-changes
 
 Unit testing Gitlab Api Library:
   variables:

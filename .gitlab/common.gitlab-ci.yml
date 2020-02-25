@@ -2,6 +2,7 @@ Linting Common library:
   extends:
     - .ng:lint
     - .common-library
+    - .common-library-changes
 
 Unit testing Common library:
   variables:
