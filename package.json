@@ -58,7 +58,7 @@
     "karma-spec-reporter": "0.0.32",
     "karma-webdriver-launcher": "1.0.7",
     "lint-staged": "10.0.8",
-    "ng-packagr": "9.0.1",
+    "ng-packagr": "9.0.2",
     "protractor": "5.4.3",
     "semantic-release": "17.0.4",
     "ts-node": "8.6.2",
