@@ -12,11 +12,13 @@ Unit testing Zip JS:
   extends:
     - .ng:test
     - .zip-js-library
+    - .zip-js-library-changes
 
 General Building Zip JS:
   extends:
     - .ng:build:general
     - .zip-js-library
+    - .zip-js-library-changes
 
 Development Building Zip JS:
   extends:
