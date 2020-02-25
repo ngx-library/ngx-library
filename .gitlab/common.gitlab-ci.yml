@@ -12,11 +12,13 @@ Unit testing Common library:
   extends:
     - .ng:test
     - .common-library
+    - .common-library-changes
 
 General Building Common library:
   extends:
     - .ng:build:general
     - .common-library
+    - .common-library-changes
 
 Development Building Common library:
   extends:

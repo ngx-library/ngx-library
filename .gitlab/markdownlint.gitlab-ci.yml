@@ -12,11 +12,13 @@ Unit testing Markdownlint library:
   extends:
     - .ng:test
     - .markdownlint-library
+    - .markdownlint-library-changes
 
 General Building Markdownlint library:
   extends:
     - .ng:build:general
     - .markdownlint-library
+    - .markdownlint-library-changes
 
 Development Building Markdownlint library:
   extends:

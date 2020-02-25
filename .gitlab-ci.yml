@@ -1,6 +1,8 @@
 .common-library:
   variables:
     PROJECT_NAME: '@ngx-library/common'
+
+.common-library-changes:
   only:
     changes:
       - angular.json
@@ -18,6 +20,8 @@
 .gitlab-api-library:
   variables:
     PROJECT_NAME: '@ngx-library/gitlab-api'
+
+.gitlab-api-library-changes:
   only:
     changes:
       - angular.json
@@ -35,6 +39,8 @@
 .markdownlint-library:
   variables:
     PROJECT_NAME: '@ngx-library/markdownlint'
+
+.markdownlint-library-changes:
   only:
     changes:
       - angular.json
@@ -52,6 +58,8 @@
 .zip-js-library:
   variables:
     PROJECT_NAME: '@ngx-library/zip-js'
+
+.zip-js-library-changes:
   only:
     changes:
       - angular.json

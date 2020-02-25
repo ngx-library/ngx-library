@@ -12,11 +12,13 @@ Unit testing Gitlab Api Library:
   extends:
     - .ng:test
     - .gitlab-api-library
+    - .gitlab-api-library-changes
 
 General Building Gitlab Api Library:
   extends:
     - .ng:build:general
     - .gitlab-api-library
+    - .gitlab-api-library-changes
 
 Development Building Gitlab Api Library:
   extends:
