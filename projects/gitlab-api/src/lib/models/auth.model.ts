@@ -1,12 +1,11 @@
 import { HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable, ReplaySubject } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 export enum GitlabApiAuthType {
   O_AUTH_2,
   PERSONAL_ACCESS_TOKEN
 }
+
 export class GitlabApiAuth {
   public readonly authHeaders: HttpHeaders;
 
@@ -30,21 +29,10 @@ export class GitlabApiAuth {
   }
 }
 
-@Injectable()
-export class GitlabApiAuthService {
+export interface GitlabApiAuthorizationReader {
+  readToken(): Observable<GitlabApiAuth>;
+}
 
-  public readonly auth: Observable<GitlabApiAuth>;
-
-  private readonly _auth: ReplaySubject<GitlabApiAuth>;
-
-  constructor() {
-    this._auth = new ReplaySubject<GitlabApiAuth>(1);
-    this.auth = this._auth.asObservable();
-  }
-
-  public setToken(type: GitlabApiAuthType, token: string): void {
-    const auth = new GitlabApiAuth(type, token);
-
-    this._auth.next(auth);
-  }
+export interface GitlabApiAuthorizationWriter {
+  writeToken(type: GitlabApiAuthType, token: string): Observable<GitlabApiAuth>;
 }

@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { first, switchMap } from 'rxjs/operators';
 
-import { GitlabApiAuthService } from './gitlab-api-auth.service';
+import { GitlabApiAuthStoreService } from './gitlab-api-auth-store.service';
 
 @Injectable()
 export class GitlabApiAuthInterceptorService implements HttpInterceptor {
 
   constructor(
-    private readonly _gitlabApiAuthService: GitlabApiAuthService
+    private readonly _gitlabApiAuthService: GitlabApiAuthStoreService
   ) { }
 
   public intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

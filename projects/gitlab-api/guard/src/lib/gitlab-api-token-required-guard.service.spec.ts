@@ -1,19 +1,21 @@
-import { inject, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { GitlabApiAuthStoreService } from '@ngx-library/gitlab-api';
 
-import { GitlabApiAuthService } from './gitlab-api-auth.service';
 import { GitlabApiTokenRequiredGuard } from './gitlab-api-token-required-guard.service';
 
 describe('GitlabApiTokenRequiredGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
-        GitlabApiAuthService,
+        GitlabApiAuthStoreService,
         GitlabApiTokenRequiredGuard
       ]
     });
   });
 
-  it('should create', inject([GitlabApiTokenRequiredGuard], (guard: GitlabApiTokenRequiredGuard) => {
+  it('should create', () => {
+    const guard = TestBed.inject(GitlabApiTokenRequiredGuard);
+
     expect(guard).toBeTruthy();
-  }));
+  });
 });

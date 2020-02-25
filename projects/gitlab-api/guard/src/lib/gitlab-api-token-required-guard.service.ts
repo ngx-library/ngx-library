@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { GitlabApiAuthStoreService } from '@ngx-library/gitlab-api';
 import { Observable, race, timer } from 'rxjs';
 import { first, map } from 'rxjs/operators';
-
-import { GitlabApiAuthService } from './gitlab-api-auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,7 @@ import { GitlabApiAuthService } from './gitlab-api-auth.service';
 export class GitlabApiTokenRequiredGuard implements CanActivate, CanActivateChild {
 
   constructor(
-    private readonly _gitlabApiAuthService: GitlabApiAuthService
+    private readonly _gitlabApiAuthService: GitlabApiAuthStoreService
   ) {}
 
   public canActivate(
@@ -21,12 +20,16 @@ export class GitlabApiTokenRequiredGuard implements CanActivate, CanActivateChil
     return race(this._gitlabApiAuthService.auth, timer(500))
       .pipe(
         first(),
-        map((arg) => arg !== 0)
+        map((arg) =>
+          typeof arg === 'number'
+            ? arg !== 0
+            : arg !== undefined)
       );
   }
   public canActivateChild(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    state: RouterStateSnapshot
+  ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return this.canActivate(next, state);
   }
 
