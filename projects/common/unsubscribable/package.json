@@ -1,0 +1,13 @@
+{
+  "name": "@ngx-library/common/unsubscribable",
+  "peerDependencies": {
+    "@angular/core": "^9.0.2",
+    "rxjs": "^6.5.4"
+  },
+  "ngPackage": {
+    "lib": {
+      "flatModuleFile": "ngx-library-common-unsubscribable",
+      "entryFile": "src/public-api.ts"
+    }
+  }
+}
