@@ -1,3 +1,10 @@
+### [1.1.1](https://gitlab.com/ngx-library/ngx-library/compare/v1.1.0...v1.1.1) (2020-02-25)
+
+
+### Bug Fixes
+
+* **gitlab-api:** add secondary entry points for lib ([bba6069](https://gitlab.com/ngx-library/ngx-library/commit/bba6069c5c2058ae4fa02cc72e354e9a3dded78d))
+
 ## [1.1.0](https://gitlab.com/ngx-library/ngx-library/compare/v1.0.0...v1.1.0) (2020-02-25)
 
 
