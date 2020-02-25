@@ -2,6 +2,7 @@ Linting Markdownlint library:
   extends:
     - .ng:lint
     - .markdownlint-library
+    - .markdownlint-library-changes
 
 Unit testing Markdownlint library:
   variables:

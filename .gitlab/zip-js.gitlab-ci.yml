@@ -2,6 +2,7 @@ Linting Zip JS:
   extends:
     - .ng:lint
     - .zip-js-library
+    - .zip-js-library-changes
 
 Unit testing Zip JS:
   variables:
