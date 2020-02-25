@@ -1,3 +1,16 @@
+## [1.1.0](https://gitlab.com/ngx-library/ngx-library/compare/v1.0.0...v1.1.0) (2020-02-25)
+
+
+### Features
+
+* **common:** implement unsubscribable abstract class ([d309051](https://gitlab.com/ngx-library/ngx-library/commit/d3090512642a1a2b836c5142e5f0ac36dd9732ec))
+
+
+### Bug Fixes
+
+* add LICENSE file ([781b5f2](https://gitlab.com/ngx-library/ngx-library/commit/781b5f21fcc0732baca6cb673b71c98a4dce549e))
+* change bugs url ([0b583c0](https://gitlab.com/ngx-library/ngx-library/commit/0b583c0fbd7a5415f3b0014781b6a3d8e085a5e2))
+
 ## 1.0.0 (2020-02-24)
 
 
