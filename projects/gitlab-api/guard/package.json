@@ -4,7 +4,7 @@
     "@angular/common": "^9.0.2",
     "@angular/core": "^9.0.2",
     "@angular/router": "^9.0.2",
-    "@ngx-library/gitlab-api": "^1.1.0",
+    "@ngx-library/gitlab-api": "^1.1.1",
     "tslib": "^1.11.0",
     "rxjs": "^6.5.4"
   },
