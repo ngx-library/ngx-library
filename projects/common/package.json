@@ -6,10 +6,11 @@
     "@angular/core": "^9.0.2",
     "tslib": "^1.11.0"
   },
-  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/common/README.md",
+  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/common",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/ngx-library/ngx-library.git"
+    "url": "git+https://gitlab.com/ngx-library/ngx-library.git",
+    "directory": "projects/common"
   },
   "license": "MIT",
   "bugs": {
