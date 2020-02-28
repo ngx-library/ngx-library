@@ -2,24 +2,23 @@ coverage:
   status:
     project:
       default:
-        target: 80%
-        threshold: 5%
+        target: 10%
       common:
-        target: 80%
+        target: 10%
         paths:
-          - projects/common/
+          - projects/common
       gitlab-api:
-        target: 80%
+        target: 10%
         paths:
-          - projects/gitlab-api/
+          - projects/gitlab-api
       markdownlint:
-        target: 80%
+        target: 10%
         paths:
-          - projects/markdownlint/
+          - projects/markdownlint
       zip-js:
-        target: 80%
+        target: 10%
         paths:
-          - projects/zip-js/
+          - projects/zip-js
 
 codecov:
   bot: mishka-assistant
