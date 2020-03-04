@@ -2,8 +2,8 @@
   "name": "@ngx-library/markdownlint",
   "version": "1.1.1",
   "peerDependencies": {
-    "@angular/common": "^9.0.4",
-    "@angular/core": "^9.0.4",
+    "@angular/common": "^9.0.5",
+    "@angular/core": "^9.0.5",
     "tslib": "^1.11.1",
     "rxjs": "^6.5.4",
     "markdownlint": "^0.19.0"

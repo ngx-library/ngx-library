@@ -1,8 +1,8 @@
 {
   "name": "@ngx-library/gitlab-api/local-storage",
   "peerDependencies": {
-    "@angular/common": "^9.0.4",
-    "@angular/core": "^9.0.4",
+    "@angular/common": "^9.0.5",
+    "@angular/core": "^9.0.5",
     "@ngx-pwa/local-storage": "^9.0.2",
     "@ngx-library/gitlab-api": "^1.1.1",
     "tslib": "^1.11.1",
