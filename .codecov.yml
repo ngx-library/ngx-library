@@ -3,6 +3,10 @@ coverage:
     project:
       default:
         target: 10%
+      infrastructure:
+        target: 10%
+        paths:
+          - projects/infrastructure
       common:
         target: 10%
         paths:

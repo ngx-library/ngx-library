@@ -2,7 +2,7 @@ const angular = require('./angular.json');
 
 const preset = 'conventionalcommits';
 
-const projects = Object.entries(angular.projects)
+const libraries = Object.entries(angular.projects)
   .filter(([ , { projectType }]) => projectType === 'library')
   .map(([ project ]) => project.replace(/^@ngx-library\//, ''));
 
@@ -23,10 +23,10 @@ const plugins = [
     'preset': preset,
   }],
   '@semantic-release/changelog',
-  ...projects.map((title) => ['@semantic-release/npm', {
+  ...libraries.map((title) => ['@semantic-release/npm', {
     'pkgRoot': `dist/@ngx-library/${title}`,
   }]),
-  ...projects.map((title) => ['@semantic-release/npm', {
+  ...libraries.map((title) => ['@semantic-release/npm', {
     'npmPublish': false,
     'pkgRoot': `projects/${title}`,
   }]),
@@ -38,7 +38,7 @@ const plugins = [
     "assets": [
       'CHANGELOG.md',
       'package.json',
-      ...projects.map((title) => `projects/${title}/package.json`)
+      ...libraries.map((title) => `projects/${title}/package.json`)
     ],
   }],
   '@semantic-release/gitlab'
