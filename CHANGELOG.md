@@ -1,3 +1,15 @@
+## [1.2.0](https://gitlab.com/ngx-library/ngx-library/compare/v1.1.1...v1.2.0) (2020-03-09)
+
+
+### Features
+
+* **infrastructure:** implement infrastructure library ([eaef3a2](https://gitlab.com/ngx-library/ngx-library/commit/eaef3a200ce6d6d1a131729027493e2feac60549))
+
+
+### Bug Fixes
+
+* update links in package.json files ([f7468b0](https://gitlab.com/ngx-library/ngx-library/commit/f7468b087bf5ffd4237c0bb3fe6c310b419b101a))
+
 ### [1.1.1](https://gitlab.com/ngx-library/ngx-library/compare/v1.1.0...v1.1.1) (2020-02-25)
 
 
