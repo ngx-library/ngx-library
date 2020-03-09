@@ -1,0 +1,43 @@
+{
+  "name": "@ngx-library/infrastructure",
+  "version": "1.1.1",
+  "dependencies": {
+    "@commitlint/config-conventional": "8.3.4",
+    "@semantic-release/changelog": "5.0.0",
+    "@semantic-release/exec": "5.0.0",
+    "@semantic-release/git": "9.0.0",
+    "@semantic-release/gitlab": "6.0.2",
+    "@types/jasmine": "3.5.8",
+    "@types/jasminewd2": "2.0.8",
+    "angular-tslint-rules": "1.20.3",
+    "commitlint": "8.3.5",
+    "conventional-changelog-conventionalcommits": "4.2.3",
+    "husky": "4.2.3",
+    "jasmine-core": "3.5.0",
+    "jasmine-spec-reporter": "4.2.1",
+    "karma": "4.4.1",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage-istanbul-reporter": "2.1.1",
+    "karma-jasmine": "3.1.1",
+    "karma-jasmine-html-reporter": "1.5.2",
+    "karma-junit-reporter": "2.0.1",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webdriver-launcher": "1.0.7",
+    "lint-staged": "10.0.8",
+    "protractor": "5.4.3",
+    "semantic-release": "17.0.4"
+  },
+  "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/infrastructure",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ngx-library/ngx-library.git",
+    "directory": "projects/infrastructure"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/ngx-library/ngx-library/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
