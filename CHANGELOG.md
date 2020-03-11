@@ -1,3 +1,10 @@
+### [1.2.2](https://gitlab.com/ngx-library/ngx-library/compare/v1.2.1...v1.2.2) (2020-03-11)
+
+
+### Bug Fixes
+
+* **gitlab-api:** fix EmptyErrorImpl in guard ([dc97c45](https://gitlab.com/ngx-library/ngx-library/commit/dc97c45b4c8d4fc06ae0171766544e2707509153))
+
 ### [1.2.1](https://gitlab.com/ngx-library/ngx-library/compare/v1.2.0...v1.2.1) (2020-03-11)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@ngx-library/infrastructure",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "dependencies": {
     "@commitlint/config-conventional": "8.3.4",
     "@semantic-release/changelog": "5.0.0",
