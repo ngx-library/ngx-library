@@ -3,10 +3,10 @@
   "version": "1.2.2",
   "dependencies": {
     "@commitlint/config-conventional": "8.3.4",
-    "@semantic-release/changelog": "5.0.0",
+    "@semantic-release/changelog": "5.0.1",
     "@semantic-release/exec": "5.0.0",
     "@semantic-release/git": "9.0.0",
-    "@semantic-release/gitlab": "6.0.2",
+    "@semantic-release/gitlab": "6.0.3",
     "@types/jasmine": "3.5.10",
     "@types/jasminewd2": "2.0.8",
     "angular-tslint-rules": "1.20.4",
