@@ -6,7 +6,7 @@
     "@angular/router": "^9.1.0",
     "@ngx-library/gitlab-api": "^1.2.2",
     "tslib": "^1.11.1",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.5"
   },
   "ngPackage": {
     "lib": {
