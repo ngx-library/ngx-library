@@ -6,7 +6,7 @@
     "@angular/core": "^9.1.1",
     "tslib": "^1.11.1",
     "rxjs": "^6.5.5",
-    "markdownlint": "^0.20.0"
+    "markdownlint": "^0.20.1"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/markdownlint",
   "repository": {
