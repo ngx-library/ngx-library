@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^9.1.4",
     "@angular/core": "^9.1.4",
-    "tslib": "^1.11.1",
+    "tslib": "^1.11.2",
     "rxjs": "^6.5.5",
     "zip-js": "^0.0.2"
   },
