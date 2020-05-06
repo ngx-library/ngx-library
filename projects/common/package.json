@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^9.1.4",
     "@angular/core": "^9.1.4",
-    "tslib": "^1.11.1"
+    "tslib": "^1.11.2"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/common",
   "repository": {
