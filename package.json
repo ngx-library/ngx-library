@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "9.1.7",
     "@angular/router": "9.1.7",
     "@ngx-pwa/local-storage": "9.0.3",
-    "markdownlint": "0.20.2",
+    "markdownlint": "0.20.3",
     "rxjs": "6.5.5",
     "tslib": "1.13.0",
     "zip-js": "0.0.2",
