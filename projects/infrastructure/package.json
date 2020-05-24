@@ -25,7 +25,7 @@
     "karma-webdriver-launcher": "1.0.8",
     "lint-staged": "10.2.6",
     "protractor": "5.4.4",
-    "semantic-release": "17.0.7"
+    "semantic-release": "17.0.8"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/infrastructure",
   "repository": {
