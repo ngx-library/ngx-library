@@ -21,7 +21,7 @@
     "@angular/router": "9.1.11",
     "@ngx-pwa/local-storage": "9.0.3",
     "markdownlint": "0.20.4",
-    "rxjs": "6.5.5",
+    "rxjs": "6.6.0",
     "tslib": "1.13.0",
     "zip-js": "0.0.2",
     "zone.js": "0.10.3"
