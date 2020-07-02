@@ -2,7 +2,7 @@
   "name": "@ngx-library/common/unsubscribable",
   "peerDependencies": {
     "@angular/core": "^9.1.11",
-    "rxjs": "^6.5.5"
+    "rxjs": "^6.6.0"
   },
   "ngPackage": {
     "lib": {
