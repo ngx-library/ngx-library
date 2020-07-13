@@ -1,3 +1,10 @@
+## [1.3.0](https://gitlab.com/ngx-library/ngx-library/compare/v1.2.2...v1.3.0) (2020-07-13)
+
+
+### Features
+
+* **gitlab-api:** added gitlab api resources ([d59a656](https://gitlab.com/ngx-library/ngx-library/commit/d59a65602c49a074cbd280975623f57c764cdb57))
+
 ### [1.2.2](https://gitlab.com/ngx-library/ngx-library/compare/v1.2.1...v1.2.2) (2020-03-11)
 
 
