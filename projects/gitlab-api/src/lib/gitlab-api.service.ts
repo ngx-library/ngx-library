@@ -1,8 +1,9 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { first, map, switchMap } from 'rxjs/operators';
 
+import { GitlabApiAuthStoreService } from './gitlab-api-auth-store.service';
 import { Action } from './models/action.model';
 import { ArchiveFormat } from './models/archive-fromat.enum';
 import { File } from './models/file.model';
@@ -27,13 +28,21 @@ export class GitlabApiService {
 
   constructor(
     @Inject(GITLAB_API_BASE_PATH) private readonly _basePath: string,
-    private readonly _http: HttpClient
+    private readonly _httpClient: HttpClient,
+    private readonly _gitlabApiAuthService: GitlabApiAuthStoreService
   ) {
 
   }
 
   public getProjects(): Observable<any> {
-    return this._http.get(PROJECTS_RESOURCES.PROJECTS(undefined, this._basePath));
+    return this._gitlabApiAuthService.auth
+      .pipe(
+        first(),
+        switchMap(({ authHeaders: headers }) => this._httpClient.get(
+          PROJECTS_RESOURCES.PROJECTS(undefined, this._basePath),
+          { headers }
+        ))
+      );
   }
 
   public commit(
@@ -68,7 +77,14 @@ export class GitlabApiService {
       })
     };
 
-    return this._http.post(PROJECTS_RESOURCES.COMMITS(projectId, undefined, this._basePath), request);
+    return this._gitlabApiAuthService.auth
+      .pipe(
+        first(),
+        switchMap(({ authHeaders: headers }) => this._httpClient
+          .post(PROJECTS_RESOURCES.COMMITS(projectId, undefined, this._basePath), request, {
+            headers
+          }))
+      );
   }
 
   public getProjectRepositoryTree(
@@ -97,12 +113,17 @@ export class GitlabApiService {
       params.page = `${config.page}`;
     }
 
-    return this._http
-      .get<File[]>(PROJECTS_RESOURCES.REPOSITORY_TREE(projectId, this._basePath), {
-        params,
-        observe: 'response'
-      })
-      .pipe(map(getPaginationFromResponse));
+    return this._gitlabApiAuthService.auth
+      .pipe(
+        first(),
+        switchMap(({ authHeaders: headers }) => this._httpClient
+          .get<File[]>(PROJECTS_RESOURCES.REPOSITORY_TREE(projectId, this._basePath), {
+            params,
+            observe: 'response',
+            headers
+          })),
+        map(getPaginationFromResponse)
+      );
   }
 
   public getProjectRepositoryArchive(
@@ -117,10 +138,16 @@ export class GitlabApiService {
       params.sha = config.sha;
     }
 
-    return this._http.get(PROJECTS_RESOURCES.REPOSITORY_ARCHIVE(projectId, format, this._basePath), {
-      params,
-      responseType: 'blob'
-    });
+    return this._gitlabApiAuthService.auth
+      .pipe(
+        first(),
+        switchMap(({ authHeaders: headers }) => this._httpClient
+          .get(PROJECTS_RESOURCES.REPOSITORY_ARCHIVE(projectId, format, this._basePath), {
+            params,
+            responseType: 'blob',
+            headers
+          }))
+      );
   }
 
   public getProjectRepositoryFileRaw(
@@ -130,14 +157,15 @@ export class GitlabApiService {
   ): Observable<string> {
     const params: { ref: string } = { ref };
 
-    const headers = new HttpHeaders({
-      'Content-Type': 'text/plain; charset=utf-8'
-    });
-
-    return this._http.get(PROJECTS_RESOURCES.REPOSITORY_FILES_RAW(projectId, filePath, this._basePath), {
-      headers,
-      params,
-      responseType: 'text'
-    });
+    return this._gitlabApiAuthService.auth
+      .pipe(
+        first(),
+        switchMap(({ authHeaders: headers }) => this._httpClient
+          .get(PROJECTS_RESOURCES.REPOSITORY_FILES_RAW(projectId, filePath, this._basePath), {
+            headers,
+            params,
+            responseType: 'text'
+          }))
+      );
   }
 }
