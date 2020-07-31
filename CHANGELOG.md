@@ -1,3 +1,10 @@
+## [1.4.0](https://gitlab.com/ngx-library/ngx-library/compare/v1.3.0...v1.4.0) (2020-07-31)
+
+
+### Features
+
+* **gitlab-api:** rid of GitlabApiAuthInterceptorService ([0e99fa1](https://gitlab.com/ngx-library/ngx-library/commit/0e99fa190a852ebe1265e34d8d064706d4b94f3b))
+
 ## [1.3.0](https://gitlab.com/ngx-library/ngx-library/compare/v1.2.2...v1.3.0) (2020-07-13)
 
 
