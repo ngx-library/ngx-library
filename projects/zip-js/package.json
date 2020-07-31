@@ -5,7 +5,7 @@
     "@angular/common": "^9.1.12",
     "@angular/core": "^9.1.12",
     "tslib": "^1.12.0",
-    "rxjs": "^6.6.0",
+    "rxjs": "^6.6.2",
     "zip-js": "^0.0.2"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/zip-js",
