@@ -6,7 +6,7 @@
     "@ngx-pwa/local-storage": "^9.0.3",
     "@ngx-library/gitlab-api": "^1.4.0",
     "tslib": "^1.12.0",
-    "rxjs": "^6.6.2"
+    "rxjs": "^6.6.3"
   },
   "ngPackage": {
     "lib": {
