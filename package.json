@@ -41,7 +41,7 @@
     "@types/jasminewd2": "2.0.8",
     "@types/node": "12.12.62",
     "angular-tslint-rules": "1.20.4",
-    "codecov": "3.7.2",
+    "codecov": "3.8.0",
     "codelyzer": "5.2.2",
     "commitlint": "8.3.5",
     "conventional-changelog-conventionalcommits": "4.4.0",
