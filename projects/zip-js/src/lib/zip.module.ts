@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
-import { ZIP_WORKER_SCRIPTS_PATH, ZipService } from './zip.service';
+import { ZipService, ZIP_WORKER_SCRIPTS_PATH } from './zip.service';
 
 @NgModule({})
 export class ZipModule {

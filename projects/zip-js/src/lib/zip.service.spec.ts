@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ZIP_WORKER_SCRIPTS_PATH, ZipService } from './zip.service';
+import { ZipService, ZIP_WORKER_SCRIPTS_PATH } from './zip.service';
 
 describe('ZipService', () => {
   beforeEach(() => TestBed.configureTestingModule({

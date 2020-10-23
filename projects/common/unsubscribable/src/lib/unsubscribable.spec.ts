@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Injectable, NO_ERRORS_SCHEMA } from '@angular/core';
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
 import { Unsubscribable } from './unsubscribable';
 
@@ -29,7 +29,7 @@ class TestUnsubscribableService extends Unsubscribable {
 
 describe('Unsubscribable', () => {
 
-  beforeEach(async(() => {
+  beforeEach(() =>
     TestBed
       .configureTestingModule({
         declarations: [TestUnsubscribableComponent],
@@ -38,8 +38,8 @@ describe('Unsubscribable', () => {
           TestUnsubscribableService
         ]
       })
-      .compileComponents();
-  }));
+      .compileComponents()
+  );
 
   it('should destroy component and complete observable', () => {
     const fixture = TestBed.createComponent(TestUnsubscribableComponent);
