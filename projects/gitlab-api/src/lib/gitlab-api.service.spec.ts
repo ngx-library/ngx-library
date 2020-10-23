@@ -2,7 +2,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 import { GitlabApiAuthStoreService } from './gitlab-api-auth-store.service';
-import { GITLAB_API_BASE_PATH, GitlabApiService } from './gitlab-api.service';
+import { GitlabApiService, GITLAB_API_BASE_PATH } from './gitlab-api.service';
 
 describe('GitlabApiService', () => {
     beforeEach(() => TestBed.configureTestingModule({
