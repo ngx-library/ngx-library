@@ -5,7 +5,7 @@
     "@angular/common": "^9.1.12",
     "@angular/core": "^9.1.12",
     "rxjs": "^6.6.3",
-    "markdownlint": "^0.21.0"
+    "markdownlint": "^0.21.1"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/markdownlint",
   "repository": {
