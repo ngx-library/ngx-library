@@ -17,7 +17,7 @@
     "url": "https://gitlab.com/ngx-library/ngx-library/issues"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "2.0.3"
   },
   "publishConfig": {
     "access": "public"
