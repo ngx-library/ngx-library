@@ -2,8 +2,8 @@
   "name": "@ngx-library/gitlab-api",
   "version": "1.4.0",
   "peerDependencies": {
-    "@angular/common": "^9.1.12",
-    "@angular/core": "^9.1.12",
+    "@angular/common": "^10.2.0",
+    "@angular/core": "^10.2.0",
     "rxjs": "^6.6.3"
   },
   "homepage": "https://gitlab.com/ngx-library/ngx-library/-/blob/develop/projects/gitlab-api",
