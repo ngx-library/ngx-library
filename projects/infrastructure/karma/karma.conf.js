@@ -10,10 +10,18 @@ module.exports = {
           coverageDir,
           logLevel = KARMA_LOG_LEVEL || 'INFO',
           thresholds = {
-            statements: 100,
-            branches: 100,
-            functions: 100,
-            lines: 100
+            global: {
+              statements: 100,
+              branches: 100,
+              functions: 100,
+              lines: 100
+            },
+            each: {
+              statements: 80,
+              branches: 80,
+              functions: 80,
+              lines: 80
+            }
           },
           chromeFlags = [
             '--disable-gpu',
@@ -74,7 +82,7 @@ module.exports = {
         require('karma-chrome-launcher'),
         require('karma-webdriver-launcher'),
         require('karma-jasmine-html-reporter'),
-        require('karma-coverage-istanbul-reporter'),
+        require('karma-coverage'),
         require('@angular-devkit/build-angular/plugins/karma'),
         require('karma-junit-reporter'),
         require('karma-spec-reporter')
@@ -97,11 +105,21 @@ module.exports = {
         showSpecTiming: true,
         failFast: false
       },
-      coverageIstanbulReporter: {
+      coverageReporter: {
         dir: coverageDir,
-        reports: ['html', 'lcovonly', 'text-summary'],
-        fixWebpackSourcePaths: true,
-        thresholds: thresholds
+        subdir: '.',
+        reporters: [
+          {
+            type: 'html'
+          },
+          {
+            type: 'lcovonly'
+          },
+          {
+            type: 'text-summary'
+          }
+        ],
+        check: thresholds
       },
       reporters: defaultReporters,
       port: 9876,
