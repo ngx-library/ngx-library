@@ -1,3 +1,14 @@
+## [3.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v2.0.0...v3.0.0) (2020-11-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** use angular v11
+
+### Features
+
+* **deps:** update angular to v11.0.2 ([4120047](https://gitlab.com/ngx-library/ngx-library/commit/41200476ed600ee43aff31c1ddc6035184d9d25c))
+
 ## [2.0.0](https://gitlab.com/ngx-library/ngx-library/compare/v1.4.0...v2.0.0) (2020-10-26)
 
 
