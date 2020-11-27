@@ -1,9 +1,9 @@
 {
   "name": "@ngx-library/gitlab-api/guard",
   "peerDependencies": {
-    "@angular/common": "^10.2.0",
-    "@angular/core": "^10.2.0",
-    "@angular/router": "^10.2.0",
+    "@angular/common": "^10.2.3",
+    "@angular/core": "^10.2.3",
+    "@angular/router": "^10.2.3",
     "@ngx-library/gitlab-api": "^2.0.0",
     "tslib": "^2.0.3",
     "rxjs": "^6.6.3"
