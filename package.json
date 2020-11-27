@@ -22,7 +22,7 @@
     "@ngx-pwa/local-storage": "11.0.1",
     "markdownlint": "0.22.0",
     "rxjs": "6.6.3",
-    "tslib": "2.0.0",
+    "tslib": "2.0.3",
     "zip-js": "0.0.2",
     "zone.js": "0.11.2"
   },
