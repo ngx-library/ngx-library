@@ -4,7 +4,7 @@
     "@angular/common": "^11.0.4",
     "@angular/core": "^11.0.4",
     "@ngx-pwa/local-storage": "^11.0.1",
-    "@ngx-library/gitlab-api": "^2.0.0",
+    "@ngx-library/gitlab-api": "^3.0.0",
     "tslib": "^2.0.3",
     "rxjs": "^6.6.3"
   },
