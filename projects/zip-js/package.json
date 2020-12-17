@@ -2,8 +2,8 @@
   "name": "@ngx-library/zip-js",
   "version": "3.0.0",
   "peerDependencies": {
-    "@angular/common": "^11.0.4",
-    "@angular/core": "^11.0.4",
+    "@angular/common": "^11.0.5",
+    "@angular/core": "^11.0.5",
     "rxjs": "^6.6.3",
     "zip-js": "^0.0.2"
   },
